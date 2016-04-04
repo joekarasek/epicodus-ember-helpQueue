@@ -3,5 +3,5 @@
 <p class="well">Notes:
   {{ ticket.notes }}
 </p>
-Back button
-Close button
+{{#link-to 'teacher'}}Back{{/link-to}}
+<button {{action 'delete' ticket}}>close</button>
