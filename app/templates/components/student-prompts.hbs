@@ -26,9 +26,11 @@
     </div>
     <button {{action 'save'}}>Help!</button>
   </form>
-{{else}}
-  <h4>Thanks. Help is on its way.</h4>
-  <p>Leave this open while you continue to work on the problem.</p>
-  <button>Close Ticket</button>
+{{else if (eq state 5)}}
+  <h4>Thanks. NAMES HERE Help is on its way.</h4>
+  <p>Leave this page open while you continue to work on the problem.</p>
+  <button {{action 'delete'}}>Nevermind, we got it.</button>
+  {{#link-to 'index'}}<button>Return to Index</button>{{/link-to}}
+{{else if (eq state 6)}}
   {{#link-to 'index'}}<button>Return to Index</button>{{/link-to}}
 {{/if}}

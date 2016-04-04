@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   state: 1,
+  ticket: {},
   actions: {
     nextState() {
       var state = this.get('state');
@@ -14,9 +15,9 @@ export default Ember.Component.extend({
         notes: this.get('notes')
       };
       this.sendAction('save', params);
-      var state = this.get('state');
-      state++;
-      this.set('state', state);
+    },
+    delete() {
+
     }
   }
 });
