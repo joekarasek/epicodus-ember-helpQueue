@@ -1,0 +1,34 @@
+{{#if (eq state 1)}}
+  <p>
+    Have you gone through all the steps on the Learn How to Program debugging lesson?
+  </p>
+  <button {{action 'nextState'}}>Yes >></button>
+{{else if (eq state 2)}}
+  <p>
+    Have you asked another pair for help?
+  </p>
+<button {{action 'nextState'}}>Yes >></button>
+{{else if (eq state 3)}}
+  <p>
+    Have you spent 15 minutes going through the problem documenting every step?
+  </p>
+<button {{action 'nextState'}}>Yes >></button>
+{{else if (eq state 4)}}
+  <form>
+    <div class="form-group">
+      {{input value=names id="names" placeholder="Please enter your name."}}
+    </div>
+    <div class="form-group">
+      {{input value=location id="location" placeholder="Please enter your location."}}
+    </div>
+    <div class="form-group">
+      {{input value=notes id="notes" placeholder="Give a brief description of the issue you are having."}}
+    </div>
+    <button {{action 'save'}}>Help!</button>
+  </form>
+{{else}}
+  <h4>Thanks. Help is on its way.</h4>
+  <p>Leave this open while you continue to work on the problem.</p>
+  <button>Close Ticket</button>
+  {{#link-to 'index'}}<button>Return to Index</button>{{/link-to}}
+{{/if}}
