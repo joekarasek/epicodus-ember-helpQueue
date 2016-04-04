@@ -1,0 +1,14 @@
+
+ .navBar {
+   margin: 10px 10px;
+   text-align: center;
+   font-size: 1.8em;
+   background-color: #F05A26;
+   padding: 8px;
+ }
+
+ .navBar a {
+   font-weight: lighter;
+   letter-spacing: 3px;
+   color: white;
+ }
