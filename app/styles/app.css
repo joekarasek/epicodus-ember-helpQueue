@@ -16,3 +16,13 @@
  body {
    background-color: #ECF0F1;
  }
+
+ hr {
+   color: black;
+ }
+
+.ticket-tile {
+  border-bottom: 1px solid rgba(171, 169, 169, 0.34);
+  padding: 10px 20px;
+  font-size: 18px;
+}
