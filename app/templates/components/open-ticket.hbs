@@ -1,12 +1,11 @@
-<!-- {{#if ticketOpen}}
-  <h4>Thanks, {{model.name}}. Help is on the way.</h4>
+{{#if ticketOpen}}
+  <h4>Thanks, {{ticket.names}}. Help is on the way.</h4>
 
   <p>Leave this page open while you continue working on the problem.</p>
 
-  <button {{action 'delete' model}}>Nevermind, we got it.</button>
+  <button {{action 'delete' ticket}}>Nevermind, we got it.</button>
   {{#link-to 'index'}}<button>Return to Index</button>{{/link-to}}
 {{else}}
   <h4>Your ticket has been closed.</h4>
   {{#link-to 'index'}}<button>Return to Index</button>{{/link-to}}
-{{/if}} -->
-{{open-ticket ticket=model delete="delete"}}
+{{/if}}
