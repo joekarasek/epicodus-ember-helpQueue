@@ -1,7 +1,7 @@
 <h2>{{ ticket.names }}</h2>
 <h3>{{ ticket.location }}</h3>
-<p class="well">Notes:
+<p class="well">
   {{ ticket.notes }}
 </p>
 {{#link-to 'teacher'}}Back{{/link-to}}
-<button {{action 'delete' ticket}}>close</button>
+<button class="pull-right" {{action 'delete' ticket}}>close</button>
