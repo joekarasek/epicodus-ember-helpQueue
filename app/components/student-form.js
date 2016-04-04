@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  isFormShowing: true,
   classNames: ['well'],
   actions: {
     save() {
@@ -10,6 +11,9 @@ export default Ember.Component.extend({
         notes: this.get('notes')
       };
       this.sendAction('save', params);
+      this.set('isFormShowing', false);
+    }, showForm() {
+      this.set('isFormShowing', true);
     }
   }
 });

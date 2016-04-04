@@ -5,6 +5,6 @@ export default Ember.Route.extend({
     save(params) {
       var newTicket = this.store.createRecord('ticket', params);
       newTicket.save();
-    }
+    },
   }
 });

@@ -1,12 +1,19 @@
-<form>
-  <div class="form-group">
-    {{input value=names id="names" placeholder="Please enter your name."}}
-  </div>
-  <div class="form-group">
-    {{input value=location id="location" placeholder="Please enter your location."}}
-  </div>
-  <div class="form-group">
-    {{input value=notes id="notes" placeholder="Give a brief description of the issue you are having."}}
-  </div>
-  <button {{action 'save'}}>Help!</button>
-</form>
+{{#if isFormShowing}}
+  <form>
+    <div class="form-group">
+      {{input value=names id="names" placeholder="Please enter your name."}}
+    </div>
+    <div class="form-group">
+      {{input value=location id="location" placeholder="Please enter your location."}}
+    </div>
+    <div class="form-group">
+      {{input value=notes id="notes" placeholder="Give a brief description of the issue you are having."}}
+    </div>
+    <button {{action 'save'}}>Help!</button>
+  </form>
+{{else}}
+  <h4>Thanks. Help is on its way.</h4>
+  <p>Leave this open while you continue to work on the problem.</p>
+  <button>Close Ticket</button>
+  {{#link-to 'index'}}<button>Return to Index</button>{{/link-to}}
+{{/if}}
